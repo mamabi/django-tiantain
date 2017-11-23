@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '2u#a_ae*_vf!!&vnpg)l=&m9=_7n=y24!2mw4=yudolgf3#^#y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -86,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tiantian',
         'USER':'root',
-        'PASSWORD':'111111',
+        'PASSWORD':'Password111111!',
         'HOST':'localhost',
         'PORT':'3306',
     }
@@ -115,9 +115,9 @@ STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
 ]
 # 开发阶段上传文件目录
-MEDIA_ROOT=os.path.join(BASE_DIR,'static')
+#MEDIA_ROOT=os.path.join(BASE_DIR,'static')
 # 部署后上传目录
-# MEDIA_ROOT='/var/www/dailyfresh/static'
+MEDIA_ROOT='/var/www/dailyfresh/static'
 
 TINYMCE_DEFAULT_CONFIG = {
     'theme': 'advanced',
@@ -137,6 +137,9 @@ HAYSTACK_CONNECTIONS = {
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 #搜索出来的结果一页显示多少个
 HAYSTACK_SEARCH_RESULTS_PER_PAGE=2
+
+STATIC_ROOT='/var/www/dailyfresh/static/'
+STATIC_URL='/static/'
 
 
 

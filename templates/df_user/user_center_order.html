@@ -61,19 +61,19 @@
 
 					<div class="pagenation">
 						{%if page.has_previous%}
-						<a href="/user/order{{page.previous_page_number}}/">上一页</a>
+						<a href="/user/order/{{page.previous_page_number}}">上一页</a>
 						{%endif%}
 
 						{%for pindex in paginator.page_range%}
 						{%if pindex == page.number%}
 						<a href="#" class="active">{{pindex}}</a>
 						{%else%}
-						<a href="/user/order{{pindex}}/">{{pindex}}</a>
+						<a href="/user/order/{{pindex}}">{{pindex}}</a>
 						{%endif%}
 						{%endfor%}
 
 						{%if page.has_next%}
-						<a href="/user/order{{page.next_page_number}}/">下一页></a>
+						<a href="/user/order/{{page.next_page_number}}">下一页></a>
 						{%endif%}
 					</div>
 				{%else%}
