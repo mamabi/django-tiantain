@@ -1,0 +1,62 @@
+1、在本地的虚拟环境中，项目根目录下，执行命令收集所有包
+pip freeze > plist.txt
+
+2、在虚拟环境上工作，安装所有需要的包
+workon [虚拟环境名称]
+pip install -r plist.txt
+
+3、安装MySQL-python模块（有问题）
+yum install MySQL-python -y
+https://zhidao.baidu.com/question/137823573519222965.html
+
+在虚拟环境中安装
+yum install -y mysql-devel python-devel python-setuptools
+
+pip install MySQL-python
+
+https://www.cnblogs.com/andrew_wang/p/6086437.html
+或者
+http://www.4wei.cn/archives/1001769
+-----------------------------------------------------------------------
+3、安装MySQL-python模块（这种方法import MySQLdb 不出错）
+yum install python-devel mysql-devel zlib-devel openssl-devel
+
+pip install MySQL-python
+
+http://www.300168.com/yunwei/show-8120.html
+
+------------------------------------------------------------------------
+4、centos版本查看
+lsb_release -a
+
+http://www.linuxidc.com/Linux/2014-12/110748.htm
+
+5、mysql安装
+注意：启动要在root用户下，不然需要验证
+http://www.linuxidc.com/Linux/2016-09/135288.htm
+http://www.linuxidc.com/Linux/2016-09/134940.htm
+密码：Password111111!(大小写，字母，数字，特殊字符)
+
+其他：
+https://www.cnblogs.com/hwd-cnblogs/p/5213337.html
+http://blog.csdn.net/tanyhuan/article/details/52244295
+
+6、mysql卸载
+http://blog.csdn.net/rosten/article/details/25096159
+7、用户切换
+su 用户
+https://www.cnblogs.com/oradragon/archive/2012/08/30/2664551.html
+
+8、数据库导入
+source /root/20151010.sql
+
+https://jingyan.baidu.com/article/6fb756ec999116241858fbf0.html
+
+------------------------------------------------------------------
+9、安装pillow
+
+sudo yum install python-devel
+sudo yum install zlib-devel
+sudo yum install libjpeg-turbo-devel
+
+http://www.jb51.net/article/78738.htm
